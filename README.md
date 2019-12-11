@@ -59,13 +59,13 @@
 
 ### сборка, загрузка в dockerhub, проверка
 
-    docker build -t maxvogelfrei/nginx:1 .
-    docker push maxvogelfrei/nginx:1
-    docker run -d -p 80:80 maxvogelfrei/nginx:1
-    docker ps
+    # docker build -t maxvogelfrei/nginx:1 .
+    # docker push maxvogelfrei/nginx:1
+    # docker run -d -p 80:80 maxvogelfrei/nginx:1
+    # docker ps
     CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                NAMES
     d25b64610f61        maxvogelfrei/nginx:1   "nginx -g 'daemon of…"   33 minutes ago      Up 33 minutes       0.0.0.0:80->80/tcp   confident_hellman
-    docker exec -it d25b64610f61 sh
+    # docker exec -it d25b64610f61 sh
     tail /var/log/nginx/access.log
       192.168.20.190 - - [11/Dec/2019:15:15:40 +0000] "GET / HTTP/1.1" 200 171 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" "-"
       192.168.20.190 - - [11/Dec/2019:15:15:40 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://192.168.20.247/" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" "-"
