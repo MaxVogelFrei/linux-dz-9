@@ -21,7 +21,9 @@
 [nginx.conf](nginx.conf)  
 указание nginx прочитать дополнительный конфиг
 
+      ...
       include /etc/nginx/conf.d/*.conf;
+      ...
 
 
 [default.conf](default.conf)  
@@ -34,7 +36,7 @@
       root   /usr/share/nginx/html;
       index  index.html index.htm;
       }
-
+    ...
 
 [index.html](index.html)  
 страничка на замену дефолту
